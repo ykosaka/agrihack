@@ -20,7 +20,7 @@ test:
 
 production:
   <<: *default
-  host: shilfy-dev.cp9hl8u2mcm6.ap-northeast-1.rds.amazonaws.com
+  host: <%= ENV['AGRI_DB'] %>
   database: agrihack_production
   username: agrihack
   password: <%= ENV['DB_PASSWORD'] %>

@@ -4,6 +4,9 @@
 # the maximum value specified for Puma. Default is set to 5 threads for minimum
 # and maximum; this matches the default thread size of Active Record.
 #
+_proj_path = "#{File.expand_path("../..", __FILE__)}"
+_proj_name = File.basename(_proj_path)
+_home = ENV.fetch("HOME") { "/var/www/rails/agrihack/agri_web" }
 threads_count = ENV.fetch("RAILS_MAX_THREADS") { 5 }
 threads threads_count, threads_count
 

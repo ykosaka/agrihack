@@ -1,0 +1,2 @@
+module YasaisHelper
+end

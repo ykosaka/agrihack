@@ -1,0 +1,27 @@
+<%= form_with(model: yasai, local: true) do |form| %>
+  <% if yasai.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(yasai.errors.count, "error") %> prohibited this yasai from being saved:</h2>
+
+      <ul>
+      <% yasai.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :yasai_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quantity %>
+    <%= form.number_field :quantity, id: :yasai_quantity %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

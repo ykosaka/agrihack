@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @yasai.name %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @yasai.quantity %>
+</p>
+
+<%= link_to 'Edit', edit_yasai_path(@yasai) %> |
+<%= link_to 'Back', yasais_path %>

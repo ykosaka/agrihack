@@ -1,0 +1,2 @@
+class Yasai < ApplicationRecord
+end

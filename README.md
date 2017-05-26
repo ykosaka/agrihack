@@ -10,6 +10,7 @@
 `bundle install`
 
 mysql
+
 `CREATE DATABASE `agrihack_test` DEFAULT CHARACTER SET `utf8mb4` COLLATE `utf8mb4_bin`;`
 
 `CREATE DATABASE `agrihack_development` DEFAULT CHARACTER SET `utf8mb4` COLLATE `utf8mb4_bin`;`

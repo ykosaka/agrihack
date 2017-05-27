@@ -6,14 +6,21 @@ class VegetableInformation < ApplicationRecord
     def search(options)
       rel = VegetableInformation.joins(:vegetable, :market)
       rel = rel.where(month: options[:month]) if options[:month].present?
-      rel = rel.where(id: get_most_cheaper_ids(rel))
+      rel = rel.where(id: get_cheapest_ids(rel))
+      rel = rel.order(price: :asc)
       rel
     end
 
-    def get_most_cheaper_ids(vegetable_informations)
-      # FIX: ここバグってるので直す
-      result = vegetable_informations.select('id, min(price, delivery_fee) as cost').group(:id)
-      result.pluck(:id)
+    def get_cheapest_ids(vegetable_informations)
+      output = []
+
+      vegetable_ids = vegetable_informations.pluck(:vegetable_id).uniq
+      vegetable_ids.each do |vegetable_id|
+        a = vegetable_informations.where(vegetable_id: vegetable_id).where.not(quantity: 0)
+        a = a.order('(price + delivery_fee) asc')
+        output << a.first.id if a.first.present?
+      end
+      output
     end
   end
 end

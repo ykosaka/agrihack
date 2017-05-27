@@ -1,4 +1,10 @@
-検索してください
+<div class="search-index">
+  <h1>使い方</h1>
+  <p>
+    このサービスは、全国にある市場から旬の野菜や果物を注文できるサイトです。<br>
+    使用したい月を選択して検索をしてみましょう。
+  </p>
 
-<%= render 'search_form' %>
-<%= render partial: 'search_table', locals: { vegetable_informations: @vegetable_informations } %>
+  <%= render 'search_form' %>
+  <%= render partial: 'search_table', locals: { vegetable_informations: @vegetable_informations } %>
+</div>

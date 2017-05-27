@@ -1,6 +1,7 @@
 <tr>
-  <th><%= vegetable_information.vegetable.name %></th>
-  <th><%= vegetable_information.quantity %></th>
-  <th><%= vegetable_information.price %></th>
-  <th><%= vegetable_information.market.name %></th>
+  <td><%= vegetable_information.vegetable.name %></td>
+  <td><%= vegetable_information.market.name %></td>
+  <td><%= select_tag :number, options_for_select([["500g", 0.5], ["1kg", 1], ["2kg", 2]]), prompt: 'どのくらい' %></td>
+  <td><%= vegetable_information.price %>円</td>
+  <td> xxxx 円 </td>
 </tr>

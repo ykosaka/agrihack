@@ -8,6 +8,6 @@ class SearchController < ApplicationController
   private
 
   def month_options
-    (1..10).to_a.map { |num| ["#{num}月", num] }
+    (1..12).to_a.map { |num| ["#{num}月", num] }
   end
 end

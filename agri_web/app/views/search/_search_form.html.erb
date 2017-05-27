@@ -1,5 +1,15 @@
-<%= form_tag root_path, method: :get, class: 'form-inline' do %>
-  <%= label_tag  :month, '現在の月' %>
-  <%= select_tag :month, options_for_select(month_options), class: 'form-control' %>
-  <%= submit_tag '検索する', class: 'btn btn-primary' %>
+<%= form_tag root_path, method: :get, class: 'form-inline search-form' do %>
+  <div class="row">
+    <div class="col-xs-4">
+
+    </div>
+
+    <div class="col-xs-4">
+      <%= select_tag :month, options_for_select(month_options), class: 'form-control' %>
+    </div>
+
+    <div class="col-xs-4">
+      <%= submit_tag '検索する', class: 'btn btn-primary' %>
+    </div>
+  </div>
 <% end %>

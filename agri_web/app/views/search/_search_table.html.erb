@@ -1,13 +1,15 @@
-<table class="table">
-  <thead>
+<div class="search-table-area">
+  <table class="table">
+    <thead>
     <tr>
       <th>品目</th>
       <th>数量</th>
       <th>価格</th>
       <th>市場</th>
     </tr>
-  </thead>
-  <tbody>
+    </thead>
+    <tbody>
     <%= render partial: 'search_table_row', collection: vegetable_informations, as: :vegetable_information %>
-  </tbody>
-</table>
+    </tbody>
+  </table>
+</div>

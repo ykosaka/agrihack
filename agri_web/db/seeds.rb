@@ -25,3 +25,5 @@ csv_data = CSV.read(csv_path, encoding: 'Shift_JIS:UTF-8')
   VegetableInformation.create(vegetable_id: veg_id, market_id: mkt_id, month: month, price: price, quantity: quantity)
   }
 } 
+
+Rake::Task['setup:delicious_point'].invoke

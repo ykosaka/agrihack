@@ -1,6 +1,48 @@
 .search-index {
+  min-height: 100vh;
+  background-color: #fff;
+
+  .agrihack-container {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .logo-area {
+    margin-bottom: 30px;
+
+    .logo {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .search-form {
+    margin-top: 20px;
+    width: 100%;
+
+    select {
+      width: 100%;
+    }
+  }
+
   h1 {
     font-weight: bold;
     font-size: 3rem;
+  }
+
+  .top-image-area {
+    padding-top: 50px;
+    height: 300px;
+    width: 100%;
+    background-image: asset-url('top.jpeg');
+    background-size: cover;
+  }
+
+  .search-table-area {
+    border: 1px solid #ddd;
+    padding: 10px;
+
+    margin-top: 40px;
   }
 }

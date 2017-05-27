@@ -8,6 +8,7 @@ class VegetableInformation < ApplicationRecord
       rel = rel.where(month: options[:month]) if options[:month].present?
       rel = rel.where(id: get_cheapest_ids(rel))
       rel = rel.order(delicious_point: :desc)
+      rel = rel.limit(10)
       rel
     end
 

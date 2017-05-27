@@ -8,3 +8,24 @@
   <%= render 'search_form' %>
   <%= render partial: 'search_table', locals: { vegetable_informations: @vegetable_informations } %>
 </div>
+<div class="recipe-search">
+  <h1>おすすめのレシピ</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>イメージ</th>
+        <th>レシピ</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @titles.each_with_index do |title, index| %>
+        <tr>
+          <td><img src="<%= @images[index] %>"></td>
+          <td><a href="<%= "https://cookpad.com/" + title.attribute('href').value %>"><%= title.content %></a></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</div>

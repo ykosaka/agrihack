@@ -10,8 +10,11 @@
 
   <div class="agrihack-container">
     <h1><%= params[:month] || 1 %>月の旬の野菜・果物</h1>
-
     <%= render partial: 'search_table', locals: { vegetable_informations: @vegetable_informations } %>
+
+    <div class="referrer-friend-button">
+      近隣の飲食店に紹介してポイントをゲット
+    </div>
 
     <h1>"<%= @vegetable_informations.first.vegetable.name %>"のおすすめレシピ</h1>
     <div class="search-table-area">

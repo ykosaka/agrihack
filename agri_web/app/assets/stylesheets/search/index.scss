@@ -43,7 +43,17 @@
   .search-table-area {
     border: 1px solid #ddd;
     padding: 10px;
+    margin: 40px 0;
+  }
 
-    margin-top: 40px;
+  .referrer-friend-button {
+    background: orange;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 15px;
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
   }
 }

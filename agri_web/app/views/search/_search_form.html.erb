@@ -1,0 +1,7 @@
+<%= form_tag root_path, method: :get do %>
+  <%= label_tag  :max_price, '予算額' %>
+  <%= select_tag :max_price, options_for_select(prices_options) %>
+  <%= label_tag  :vegetable_number, '表示する品目の種類数' %>
+  <%= select_tag :vegetable_number, options_for_select(vegetable_number_options) %>
+  <%= submit_tag '検索する' %>
+<% end %>
